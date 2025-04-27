@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamps Electronics - E-commerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="ecm.css">
+</head>
+<body class="bg-gray-100 text-gray-800 smooth-scroll">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">Jamps Electronics</h1>
+            <div class="flex items-center space-x-4">
+                <a href="#home" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#products" class="text-gray-600 hover:text-blue-600">Products</a>
+                <div class="relative">
+                    <button id="cart-toggle" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        Cart
+                        <span id="cart-count" class="cart-count absolute bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300">
+        <div class="p-4">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold">Your Cart</h2>
+                <button id="close-cart" class="text-gray-600 hover:text-red-600">×</button>
+            </div>
+            <ul id="cart-items" class="space-y-4"></ul>
+            <p id="cart-total" class="text-lg font-semibold mt-4">Total: $0.00</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white pt-16">
+        <div class="text-center max-w-3xl mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Jamps Electronics</h1>
+            <p class="text-xl md:text-2xl mb-6">Discover the Latest in Technology</p>
+            <a href="#products" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Our Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-gray-100 rounded-lg shadow-lg p-4">
+                    <img src="img3.jpg" alt="Smartphone" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold">Smartphone Pro</h3>
+                    <p class="text-gray-600 mb-2">Latest model with 128GB storage</p>
+                    <p class="text-lg font-bold mb-4">$699.99</p>
+                    <button class="add-to-cart bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-id="1" data-name="Smartphone Pro" data-price="699.99">Add to Cart</button>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-gray-100 rounded-lg shadow-lg p-4">
+                    <img src="img4.jpg" alt="Laptop" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold">UltraBook</h3>
+                    <p class="text-gray-600 mb-2">16GB RAM, 512GB SSD</p>
+                    <p class="text-lg font-bold mb-4">$1299.99</p>
+                    <button class="add-to-cart bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-id="2" data-name="UltraBook" data-price="1299.99">Add to Cart</button>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-gray-100 rounded-lg shadow-lg p-4">
+                    <img src="img2.jpeg" alt="Headphones" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold">Wireless Headphones</h3>
+                    <p class="text-gray-600 mb-2">Noise-cancelling, 20hr battery</p>
+                    <p class="text-lg font-bold mb-4">$199.99</p>
+                    <button class="add-to-cart bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-id="3" data-name="Wireless Headphones" data-price="199.99">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>© 2025 Jamps Electronics. All rights reserved.</p>
+            <p class="mt-2">Designed by Tummalapalli Bharath</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
